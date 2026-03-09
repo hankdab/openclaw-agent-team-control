@@ -1,5 +1,7 @@
 # OpenClaw Agent Team Control
 
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 OpenClaw Agent Team Control is a macOS desktop console for operating a local OpenClaw agent swarm. It wraps a local control plane, real-time status collection, agent chat, attachment handling, and a cluster management view into a single Electron app.
 
 ## What it does

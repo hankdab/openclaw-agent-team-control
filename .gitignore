@@ -8,5 +8,6 @@ tmp-codex-test/
 generated/
 dist/
 release/
+compressed/
 build/icon.iconset/
 build/icon-1024.png
