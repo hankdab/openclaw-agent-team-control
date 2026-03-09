@@ -1,0 +1,80 @@
+{
+  "name": "new-project",
+  "version": "1.0.0",
+  "description": "Desktop control plane for OpenClaw multi-agent orchestration and operator workflows",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node server/server.mjs",
+    "build": "tsc --noEmit && vite build",
+    "make:icons": "node scripts/generate-icons.mjs",
+    "desktop": "npm run build && electron .",
+    "desktop:dev": "electron .",
+    "dist:mac": "npm run build && npm run make:icons && electron-builder --mac dmg zip",
+    "preview": "vite preview",
+    "start": "node server/server.mjs"
+  },
+  "main": "electron/main.mjs",
+  "productName": "OpenClaw Agent Team Control",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1",
+    "lucide-react": "^0.577.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "reactflow": "^11.11.4",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^5.1.4",
+    "electron": "^40.8.0",
+    "electron-builder": "^26.8.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "build": {
+    "appId": "ai.openclaw.swarm.console",
+    "productName": "OpenClaw Agent Team Control",
+    "directories": {
+      "buildResources": "build",
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "server/**/*",
+      "src/**/*",
+      "index.html",
+      "package.json"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "dist/**/*",
+      "server/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "identity": null,
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "icon": "build/icon.icns"
+    },
+    "dmg": {
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "window": {
+        "width": 540,
+        "height": 380
+      }
+    }
+  }
+}

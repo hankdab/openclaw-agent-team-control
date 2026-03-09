@@ -1,0 +1,12 @@
+node_modules/
+.openclaw/
+npm-debug.log*
+.DS_Store
+.runtime/
+.gemini-home/
+tmp-codex-test/
+generated/
+dist/
+release/
+build/icon.iconset/
+build/icon-1024.png
