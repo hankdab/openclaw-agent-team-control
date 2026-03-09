@@ -9,5 +9,6 @@ generated/
 dist/
 release/
 compressed/
+.playwright-cli/
 build/icon.iconset/
 build/icon-1024.png

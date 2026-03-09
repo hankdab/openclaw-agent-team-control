@@ -14,6 +14,16 @@ OpenClaw Agent Team Control is a macOS desktop console for operating a local Ope
 - One-click OpenClaw bootstrap entry with dependency checks and base setup
 - macOS packaging via Electron Builder
 
+## Screenshots
+
+### Home workspace
+
+![Home workspace](./docs/assets/home.png)
+
+### Swarm management
+
+![Swarm management](./docs/assets/swarm.png)
+
 ## Architecture
 
 ```mermaid
